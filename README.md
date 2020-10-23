@@ -1,0 +1,2 @@
+# lozhkina-django
+myproject
