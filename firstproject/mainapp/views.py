@@ -1,12 +1,20 @@
 from django.shortcuts import render
 
+from mainapp.models import ProductCategory, Product
 
 def index(request):
     return render(request, 'mainapp/index.html')
 
 
 def catalog(request):
+    categories = ProductCategory.object.all()
+    context = {
+        'categories': categories,
+        'page_title': 'каталог книг'
+    }
+
     return render(request, 'mainapp/catalog.html')
+
 
 
 def basket(request):
