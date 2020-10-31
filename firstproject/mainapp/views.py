@@ -8,7 +8,7 @@ def index(request):
 
 
 def catalog(request):
-    categories = ProductCategory.object.all()
+    categories = ProductCategory.objects.all()
     context = {
         'categories': categories,
         'page_title': 'каталог'
@@ -21,7 +21,7 @@ def basket(request):
 
 
 def catalog_page(request, pk):
-    courses = Products.object.filter(category_id=pk)
+    courses = Products.objects.filter(category_id=pk)
     context = {
         'courses': courses,
         'page_title': 'страница каталога'
