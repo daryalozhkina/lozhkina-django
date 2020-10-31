@@ -21,9 +21,9 @@ def basket(request):
 
 
 def catalog_page(request, pk):
-    courses = Products.objects.filter(category_id=pk)
+    books = Products.objects.filter(category_id=pk)
     context = {
-        'courses': courses,
+        'books': books,
         'page_title': 'страница каталога'
     }
     return render(request, 'mainapp/catalog_page.html', context)
