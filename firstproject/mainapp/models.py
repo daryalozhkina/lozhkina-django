@@ -12,7 +12,7 @@ class ProductCategory(models.Model):
         verbose_name = 'Книга'
         verbose_name_plural = 'Книги'
 
-class Products(models.Model):
+class Books(models.Model):
     category = models.ForeignKey(ProductCategory,
                                  on_delete=models.CASCADE)
     name = models.CharField(max_length=200)

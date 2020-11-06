@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from mainapp.models import ProductCategory, Products
+from mainapp.models import ProductCategory, Books
 
 
 def index(request):
@@ -21,9 +21,18 @@ def basket(request):
 
 
 def catalog_page(request, pk):
-    books = Products.objects.filter(category_id=pk)
+    books = Books.objects.filter(category_id=pk)
     context = {
         'books': books,
         'page_title': 'страница каталога'
     }
     return render(request, 'mainapp/catalog_page.html', context)
+
+
+def books_page(request, pk):
+    books = Books.objects.get(pk=pk)
+    context = {
+    'books': books,
+    'page_title': 'книги'
+    }
+    return render(request, 'mainapp/course_page.html', context)
