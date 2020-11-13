@@ -1,0 +1,11 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+    <div class="login-form">
+        <h2>Вход на сайт</h2>
+        <form>
+            {{ form.as_p }}
+            <input type="submit" class="post" value="=войти">
+        </form>
+    </div>
+{% endblock %}

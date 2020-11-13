@@ -4,7 +4,7 @@ from mainapp.models import ProductCategory, Books
 
 
 def index(request):
-    return render(request, 'mainapp/index.html')
+    return render(request, 'mainapp/login.html')
 
 
 def catalog(request):
@@ -13,7 +13,7 @@ def catalog(request):
         'categories': categories,
         'page_title': 'каталог'
     }
-    return render(request, 'mainapp/catalog.html')
+    return render(request, 'mainapp/catalog.html', context)
 
 
 def basket(request):
