@@ -20,10 +20,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('mainapp.urls', namespace='main')),
-    path('basketapp/<int:basket_pk>/', mainapp.basket, name='basketapp'),
 
-    path('auth', include('authapp.urls', namespace='login')),
+    path('auth', include('authapp.urls', namespace='auth')),
+
     path('basket/', include('basketapp.urls', namespace='basket')),
-   path('admin/', admin.site.urls),
+
+    path('admin/', admin.site.urls),
 ]
 

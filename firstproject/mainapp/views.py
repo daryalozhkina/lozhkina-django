@@ -4,7 +4,10 @@ from mainapp.models import ProductCategory, Books
 
 
 def index(request):
-    return render(request, 'mainapp/login.html')
+    context = {
+        'page_title': 'главная'
+    }
+    return render(request, 'mainapp/index.html', context)
 
 
 def catalog(request):
@@ -14,10 +17,6 @@ def catalog(request):
         'page_title': 'каталог'
     }
     return render(request, 'mainapp/catalog.html', context)
-
-
-def basket(request):
-    return render(request, 'mainapp/basketapp.html')
 
 
 def catalog_page(request, pk):
