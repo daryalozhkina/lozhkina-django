@@ -17,7 +17,7 @@ def catalog(request):
 
 
 def basket(request):
-    return render(request, 'mainapp/basket.html')
+    return render(request, 'mainapp/basketapp.html')
 
 
 def catalog_page(request, pk):

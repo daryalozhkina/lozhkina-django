@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title|default:"книги"|capfirst }}</title>
+    {% block css %}
+        <link rel="stylesheet" href="/static/css/style.css">
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+<div class="main-menu">
+    <ul>
+        <li>
+            <a href="{% url 'index' %}">Главная</a>
+        </li>
+        <li>
+            <a href="{% url 'catalog' %}">Каталог книг</a>
+        </li>
+        <li>
+            <a href="{% url 'login' %}">Войти</a>
+        </li>
+    </ul>
+</div>
+            <ul class="books-menu">
+                    <li><a href="">Художественная литература</a></li>
+                    <li><a href="">Научная литература</a></li>
+                    <li><a href="">Психология</a></li>
+                    <li><a href="">Романы</a></li>
+            </ul>
+<h1>Интернет-магазин "Книжечка"</h1>
+    <img src="static/img/1.jpg">
+{% block content %}
+{% endblock %}
+</body>
+</html>
