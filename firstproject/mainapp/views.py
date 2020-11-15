@@ -19,8 +19,8 @@ def catalog(request):
     return render(request, 'mainapp/catalog.html', context)
 
 
-def catalog_page(request, pk):
-    books = Books.objects.filter(category_id=pk)
+def catalog_page(request, category_pk):
+    books = Books.objects.filter(category_id=category_pk)
     context = {
         'books': books,
         'page_title': 'страница каталога'

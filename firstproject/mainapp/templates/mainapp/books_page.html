@@ -8,8 +8,8 @@
     <p class="books-desc">
         описание: {{ books.desc }}
     </p>
-    <a href="{% url 'basket:add' books_id %}">
-       class="btn btn-success">
+    <a href="{% url 'basket:add' books.id %}"
+        class="btn btn-success">
             добавить
     </a>
 {% endblock %}
